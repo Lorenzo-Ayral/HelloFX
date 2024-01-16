@@ -8,6 +8,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.InputStream;
@@ -22,7 +25,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Group root = new Group();
-        Scene scene = new Scene(root, Color.AQUAMARINE);
+        Scene scene = new Scene(root, 900, 900, Color.AQUAMARINE);
 
         InputStream is = getClass().getResourceAsStream("/logo.png");
         if (is == null) {
@@ -46,6 +49,25 @@ public class HelloApplication extends Application {
 //        stage.setFullScreen(true);
 //        stage.setFullScreenExitHint("Press q to exit full screen");
 //        stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
+
+        Text text = new Text();
+        text.setText("Hello, JavaFX!");
+        text.setX(50);
+        text.setY(50);
+        text.setFont(Font.font("Verdana", 29));
+
+        Line line = new Line();
+        line.setStartX(50);
+        line.setStartY(50);
+        line.setEndX(100);
+        line.setEndY(100);
+        line.setStrokeWidth(5);
+        line.setStroke(Color.RED);
+        line.setOpacity(0.5);
+        line.setRotate(45);
+
+        root.getChildren().add(text);
+        root.getChildren().add(line);
 
         stage.setScene(scene);
         stage.show();
