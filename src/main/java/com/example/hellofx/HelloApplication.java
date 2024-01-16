@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -76,9 +77,18 @@ public class HelloApplication extends Application {
         rectangle.setStroke(Color.MAGENTA);
         rectangle.setStrokeWidth(5);
 
+        Polygon triangle = new Polygon();
+        triangle.getPoints().setAll(new Double[]{
+                200.0, 200.0,
+                300.0, 200.0,
+                250.0, 300.0
+        });
+        triangle.setFill(Color.GREEN);
+
         root.getChildren().add(text);
         root.getChildren().add(line);
         root.getChildren().add(rectangle);
+        root.getChildren().add(triangle);
 
         stage.setScene(scene);
         stage.show();
