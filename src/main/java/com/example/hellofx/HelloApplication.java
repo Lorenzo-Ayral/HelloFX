@@ -3,10 +3,8 @@ package com.example.hellofx;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.SnapshotParameters;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -16,7 +14,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.InputStream;
+import java.util.Objects;
 
 public class HelloApplication extends Application {
 
@@ -30,20 +28,20 @@ public class HelloApplication extends Application {
         Group root = new Group();
         Scene scene = new Scene(root, 900, 900, Color.AQUAMARINE);
 
-        InputStream is = getClass().getResourceAsStream("/logo.png");
-        if (is == null) {
-            throw new RuntimeException("Cannot load image: /logo.png");
-        }
+//        InputStream is = getClass().getResourceAsStream("/logo.png");
+//        if (is == null) {
+//            throw new RuntimeException("Cannot load image: /logo.png");
+//        }
+//
+//        Image icon = new Image(is);
+//        ImageView imageView = new ImageView(icon);
+//        imageView.setFitHeight(32); // set the height to 32
+//        imageView.setFitWidth(32); // set the width to 32
+//        SnapshotParameters parameters = new SnapshotParameters();
+//        parameters.setFill(Color.TRANSPARENT);
+//        icon = imageView.snapshot(parameters, null);
 
-        Image icon = new Image(is);
-        ImageView imageView = new ImageView(icon);
-        imageView.setFitHeight(32); // set the height to 32
-        imageView.setFitWidth(32); // set the width to 32
-        SnapshotParameters parameters = new SnapshotParameters();
-        parameters.setFill(Color.TRANSPARENT);
-        icon = imageView.snapshot(parameters, null);
-
-        stage.getIcons().add(icon);
+//        stage.getIcons().add(icon);
         stage.setTitle("Hello!");
         stage.setWidth(640);
         stage.setHeight(480);
@@ -92,11 +90,20 @@ public class HelloApplication extends Application {
         circle.setRadius(50);
         circle.setFill(Color.YELLOW);
 
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/logo.png")));
+        ImageView imageView = new ImageView(image);
+        imageView.setX(400);
+        imageView.setY(400);
+        imageView.setFitHeight(100);
+        imageView.setFitWidth(100);
+
         root.getChildren().add(text);
         root.getChildren().add(line);
         root.getChildren().add(rectangle);
         root.getChildren().add(triangle);
         root.getChildren().add(circle);
+        root.getChildren().add(imageView);
+
 
         stage.setScene(scene);
         stage.show();
