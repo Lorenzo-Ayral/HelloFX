@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -38,6 +39,13 @@ public class HelloApplication extends Application {
 
         stage.getIcons().add(icon);
         stage.setTitle("Hello!");
+        stage.setWidth(640);
+        stage.setHeight(480);
+//        stage.setX(100);
+//        stage.setY(200);
+//        stage.setFullScreen(true);
+//        stage.setFullScreenExitHint("Press q to exit full screen");
+//        stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
 
         stage.setScene(scene);
         stage.show();
