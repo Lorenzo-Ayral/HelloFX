@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -66,8 +67,18 @@ public class HelloApplication extends Application {
         line.setOpacity(0.5);
         line.setRotate(45);
 
+        Rectangle rectangle = new Rectangle();
+        rectangle.setX(100);
+        rectangle.setY(100);
+        rectangle.setWidth(100);
+        rectangle.setHeight(100);
+        rectangle.setFill(Color.BLUE);
+        rectangle.setStroke(Color.MAGENTA);
+        rectangle.setStrokeWidth(5);
+
         root.getChildren().add(text);
         root.getChildren().add(line);
+        root.getChildren().add(rectangle);
 
         stage.setScene(scene);
         stage.show();
