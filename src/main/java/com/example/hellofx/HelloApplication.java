@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
@@ -85,10 +86,17 @@ public class HelloApplication extends Application {
         });
         triangle.setFill(Color.GREEN);
 
+        Circle circle = new Circle();
+        circle.setCenterX(300);
+        circle.setCenterY(300);
+        circle.setRadius(50);
+        circle.setFill(Color.YELLOW);
+
         root.getChildren().add(text);
         root.getChildren().add(line);
         root.getChildren().add(rectangle);
         root.getChildren().add(triangle);
+        root.getChildren().add(circle);
 
         stage.setScene(scene);
         stage.show();
