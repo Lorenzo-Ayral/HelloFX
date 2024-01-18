@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f53b8b-3f57-4de9-a00f-4cd426fb692d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellofx/views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellofx/views/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +91,7 @@
       <workItem from="1705488424264" duration="631000" />
       <workItem from="1705489924986" duration="6218000" />
       <workItem from="1705601062213" duration="416000" />
-      <workItem from="1705601485268" duration="1094000" />
+      <workItem from="1705601485268" duration="1440000" />
     </task>
     <servers />
   </component>

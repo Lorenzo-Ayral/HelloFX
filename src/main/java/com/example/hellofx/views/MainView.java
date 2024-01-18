@@ -5,7 +5,10 @@ import javafx.geometry.Orientation;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 import java.util.List;
@@ -30,13 +33,16 @@ public class MainView extends VBox {
             TextArea someTextArea = new TextArea();
             someTextArea.setWrapText(true);
 
-            Font someFont = new Font("Tlwg Mono", 30);
+//            Font someFont = new Font("Tlwg Mono", 30);
+//
+//            for(String s : Font.getFontNames())
+//                System.out.println(s);
 
-            for(String s : Font.getFontNames())
-                System.out.println(s);
 
             Text someText = new Text("Un texte\nsur plusieurs\nlignes");
-            someText.setFont(someFont);
+//            Font.font(<family>, <weight>, <posture>, <size>)
+            someText.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.ITALIC, 30));
+            someText.setFill(Color.RED);
             someText.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
             someText.setLineSpacing(10);
 
