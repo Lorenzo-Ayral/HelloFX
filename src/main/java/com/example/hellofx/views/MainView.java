@@ -21,18 +21,18 @@ public class MainView extends VBox {
             PasswordField somePasswordField = new PasswordField();
             Separator separator = new Separator(Orientation.HORIZONTAL);
             List<String> fontFamilies = Font.getFamilies();
-            if (fontFamilies.contains("AnjaliOldLipi")) {
-                System.out.println("La police 'AnjaliOldLipi' est disponible.");
+            if (fontFamilies.contains("Tlwg Mono")) {
+                System.out.println("La police 'Tlwg Mono' est disponible.");
             } else {
-                System.out.println("La police 'AnjaliOldLipi' n'est pas disponible.");
+                System.out.println("La police 'Tlwg Mono' n'est pas disponible.");
             }
             
             TextArea someTextArea = new TextArea();
             someTextArea.setWrapText(true);
 
-            Font someFont = new Font("AnjaliOldLipi", 50);
+            Font someFont = new Font("Tlwg Mono", 30);
 
-            for(String s : Font.getFamilies())
+            for(String s : Font.getFontNames())
                 System.out.println(s);
 
             Text someText = new Text("Un texte\nsur plusieurs\nlignes");
