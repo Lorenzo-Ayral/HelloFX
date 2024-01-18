@@ -5,6 +5,8 @@ import javafx.geometry.Orientation;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 public class MainView extends VBox {
         public MainView(double spacing) {
@@ -20,6 +22,13 @@ public class MainView extends VBox {
             TextArea someTextArea = new TextArea();
             someTextArea.setWrapText(true);
 
-            components.addAll(someLabel, someTextField, separator, someTextArea, somePasswordField);
+            Font someFont = new Font("Stencil", 50);
+
+            Text someText = new Text("Un texte\nsur plusieurs\nlignes");
+            someText.setFont(someFont);
+            someText.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
+            someText.setLineSpacing(10);
+
+            components.addAll(someLabel, someTextField, separator, someTextArea, somePasswordField, someText);
         }
 }
