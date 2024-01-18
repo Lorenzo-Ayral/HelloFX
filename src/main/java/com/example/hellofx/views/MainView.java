@@ -30,7 +30,16 @@ public class MainView extends VBox {
             Button someOtherButton = new Button("Click me!");
             someOtherButton.setDefaultButton(true);
 
+            CheckBox checkBox = new CheckBox("Check me!");
 
-            components.addAll(someButton, someOtherButton);
+            CheckBox checkBox2 = new CheckBox("Check me!");
+            checkBox2.setAllowIndeterminate(true);
+
+            // allowIndeterminateProperty()
+            // isInderterminate(), isSelected(), isAllowIndeterminate()
+            // setAllowIndeterminate(), setIndeterminate(), setSelected()
+
+
+            components.addAll(someButton, someOtherButton, checkBox, checkBox2);
         }
 }
