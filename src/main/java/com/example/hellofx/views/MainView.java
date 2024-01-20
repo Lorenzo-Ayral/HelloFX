@@ -35,11 +35,13 @@ public class MainView extends VBox {
             CheckBox checkBox2 = new CheckBox("Check me!");
             checkBox2.setAllowIndeterminate(true);
 
+            ProgressBar progressBar = new ProgressBar(0.5);
+
             // allowIndeterminateProperty()
             // isInderterminate(), isSelected(), isAllowIndeterminate()
             // setAllowIndeterminate(), setIndeterminate(), setSelected()
 
 
-            components.addAll(someButton, someOtherButton, checkBox, checkBox2);
+            components.addAll(someButton, someOtherButton, checkBox, checkBox2, progressBar);
         }
 }
