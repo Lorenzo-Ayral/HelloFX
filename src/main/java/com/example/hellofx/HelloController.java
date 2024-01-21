@@ -13,15 +13,15 @@ public class HelloController {
 
 
     public void up(ActionEvent actionEvent) {
-        circle.setCenterY(y-=1);
+        circle.setCenterY(y-=10);
     }
     public void down(ActionEvent actionEvent) {
-        circle.setCenterY(y+=1);
+        circle.setCenterY(y+=10);
     }
     public void right(ActionEvent actionEvent) {
-        circle.setCenterX(x+=1);
+        circle.setCenterX(x+=10);
     }
     public void left(ActionEvent actionEvent) {
-        circle.setCenterX(x-=1);
+        circle.setCenterX(x-=10);
     }
 }
