@@ -22,6 +22,6 @@ public class HelloController {
         circle.setCenterX(x+=1);
     }
     public void left(ActionEvent actionEvent) {
-        circle.setCenterX(x -= 1);
+        circle.setCenterX(x-=1);
     }
 }
